@@ -1,0 +1,122 @@
+.visual {
+    padding   : 10em 0;
+    position  : relative;
+    width     : 1220px;
+    margin    : 0 auto;
+    transition: 0.5s;
+    color     : var(--purple-color);
+    overflow  : hidden;
+
+
+    .visual_inner {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        flex-direction : row;
+    }
+
+    .visual_content2 {
+        flex-direction: row-reverse;
+
+        .textArea {
+            width: 40%;
+        }
+
+        .imgArea {
+            width           : 430px;
+            height          : 529px;
+            background-image: url(../img/Group126.png);
+        }
+    }
+
+    .textArea {
+        width: 45%;
+
+        .fontLarge {
+            font-size  : var(--font-large);
+            font-family: 'Sigmar One', cursive;
+            line-height: 1;
+        }
+
+        .fontMicro {
+            margin   : 2rem 0;
+            font-size: var(--font-micro);
+        }
+
+        button {
+            border-radius   : 10px;
+            padding         : var(--padding) 2rem;
+            background-color: var(--purple-color);
+            color           : var(--white-color);
+            text-transform  : uppercase;
+        }
+    }
+
+    .imgArea {
+        width            : 532px;
+        height           : 711px;
+        background-image : url(../img/image95.png);
+        background-size  : cover;
+        background-repeat: no-repeat;
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet) {}
+
+//cellphone
+@media screen and (max-width:$cellphone) {
+    .visual {
+        width  : 100%;
+        padding: 0;
+
+        .visual_inner {
+            flex-direction: column;
+            margin        : 4rem 0;
+        }
+
+        .visual_content2 {
+
+            .textArea {
+                width        : 100%;
+                padding-right: 0;
+            }
+
+            .imgArea {
+                width              : 100%;
+                background-size    : contain;
+                background-position: center;
+
+            }
+        }
+
+        .textArea {
+            padding-left: 0;
+            width       : 100%;
+
+            .fontLarge {
+                font-size  : var(--font-m-large);
+                font-family: 'Sigmar One', cursive;
+                line-height: 1;
+            }
+
+            .fontNormal {
+                margin   : 2rem 0;
+                font-size: var(--font-small);
+            }
+
+            button {
+                border-radius   : 10px;
+                padding         : var(--padding) 2rem;
+                background-color: var(--purple-color);
+                color           : var(--white-color);
+            }
+        }
+
+        .imgArea {
+            width              : 100%;
+            background-size    : contain;
+            background-position: center;
+        }
+    }
+}

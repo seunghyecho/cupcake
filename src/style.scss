@@ -1,0 +1,188 @@
+@charset 'utf-8';
+
+$tablet    : 1179px;
+$cellphone : 739px;
+
+:root {
+    --white-color       : #ffffff;
+    --black-color       : #140a00;
+    --blue-color        : #045fd4;
+    --blue-dark-color   : #3023AE;
+    --red-color         : #ff0000;
+    --yellow-light-color: #FCEFD2;
+    --yellow-color      : #FFC300;
+    --purple-color      : #642C99;
+    --pink-color        : #FDE0CE;
+    --grey-dark-color   : #909090;
+    --grey-light-color  : #c0c0c0;
+
+    --padding    : 12px;
+    --avatar-size: 36px;
+
+    --font-large   : 7em;
+    --font-m-large : 6em;
+    --font-medium  : 5em;
+    --font-m-medium: 3em;
+    --font-small   : 2em;
+    --font-micro   : 1.5em;
+
+    --font-bold  : 600;
+    --font-normal: 400;
+
+    --line-height: 1.3;
+
+}
+
+//reset
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color          : var(--black-color);
+}
+
+img {
+    width: 100%;
+}
+
+button,
+button:focus {
+    border : none;
+    cursor : pointer;
+    outline: none;
+}
+
+input,
+input:focus {
+    border : none;
+    padding: 0;
+    margin : 0;
+    height : 100%;
+    width  : 100%;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size  : 10px;
+    position   : relative;
+    overflow-x : hidden;
+}
+
+//common
+.wrap {
+    position: relative;
+    padding        : var(--padding);
+    margin         : 0 auto;
+    width          : 1440px;
+    background-size: cover;
+
+    &.shop {
+        background-image: url(../img/main_bg1.png);
+
+        #header {
+            .inner {
+                ul {
+                    &#util {
+                        i {
+                            &::after {
+                                background-color: var(--yellow-light-color); //shop
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.ourStory {
+        background-image: url(../img/main_bg2.png);
+
+        #header {
+            .inner {
+                ul {
+                    &#util {
+                        i {
+                            &::after {
+                                background-color: var(--pink-color); //ourStory
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.whyMiss {
+        background-image: url(../img/main_bg3.png);
+
+        #header {
+            .inner {
+                ul {
+                    &#util {
+                        i {
+                            &::after {
+                                background-color: var(--yellow-light-color); //whyMiss
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//tablet
+@media screen and (max-width:$tablet) {}
+
+//cellphone
+@media screen and (max-width:$cellphone) {
+    .wrap {
+        width: 100%;
+
+        &.shop {
+            background-image: url(../img/main_mb_bg1.png);
+        }
+
+        &.ourStory {
+            background-image: url(../img/main_mb_bg2.png);
+        }
+
+        &.whyMiss {
+            background-image: url(../img/main_mb_bg3.png);
+        }
+    }
+}
+
+
+//main
+@import 'main/header/header';
+@import 'main/visual/visual';
+@import 'main/intro/intro';
+@import 'main/footer/footer';
+
+//sub common
+// @import 'sub/header/header';
+// @import 'sub/footer/footer';
+
+//sub page
+@import 'sub/checkout/checkout';
+@import 'sub/ourstory/ourstory';
+@import 'sub/whymiss/whymiss';
