@@ -148,7 +148,9 @@ body {
 
     &.checkOut {
         background-image: url(../img/main_bg4.png);
-
+    }
+    &.order{
+        background-image: url(../img/main_bg5.png);
     }
 }
 
@@ -177,6 +179,9 @@ body {
             background-image: url(../img/main_mb_bg4.png);
 
         }
+        &.order{
+            background-image: url(../img/main_mb_bg5.png);
+        }
     }
 }
 
@@ -195,3 +200,4 @@ body {
 @import 'sub/checkout/checkout';
 @import 'sub/ourstory/ourstory';
 @import 'sub/whymiss/whymiss';
+@import 'sub/order/order';

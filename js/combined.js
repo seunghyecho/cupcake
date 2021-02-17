@@ -30,6 +30,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     console.log('visual');
 })
+
 $(document).ready(function(){
     console.log('sub ourstory');
 })

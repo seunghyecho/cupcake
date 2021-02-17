@@ -1,14 +1,14 @@
 .checkOut_content {
-    padding: 10em 0;
-    position: relative;
-    top: -42px;
-    z-index: 9;
-    width: 1220px;
-    margin: 0 auto;
+    padding   : 10em 0;
+    position  : relative;
+    top       : -42px;
+    z-index   : 9;
+    width     : 1220px;
+    margin    : 0 auto;
     transition: 0.5s;
-    color: var(--purple-color);
+    color     : var(--purple-color);
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 
     section {
         padding-top: 20em;
@@ -72,9 +72,10 @@
             li {
                 padding    : 1.5em 0;
                 display    : flex;
-                align-items: center;
+                align-items: flex-end;
+                flex-wrap  : wrap;
 
-                div {
+                >div {
 
                     &:nth-of-type(1) {
                         width: 10%;
@@ -95,8 +96,9 @@
                         text-align: right;
                     }
 
-                    &.count {
+                    .count {
                         height       : 4em;
+                        width        : max-content;
                         line-height  : 4em;
                         border       : 2px solid var(--purple-color);
                         border-radius: 10px;
@@ -136,6 +138,7 @@
             float      : right;
             font-size  : var(--font-small);
             font-weight: var(--font-normal);
+            
 
             .totalPrice {
                 padding        : 2em 0;
@@ -154,10 +157,12 @@
                 line-height     : 6em;
                 background-color: var(--purple-color);
                 border-radius   : 20px;
+                text-transform: uppercase;
 
                 a {
-                    color    : var(--white-color);
-                    font-size: var(--font-small);
+                    color: var(--yellow-light-color);
+                    font-size: var(--font-micro);
+                    display: block;
                 }
             }
         }
@@ -168,4 +173,59 @@
 @media screen and (max-width:$tablet) {}
 
 //cellphone
-@media screen and (max-width:$cellphone) {}
+@media screen and (max-width:$cellphone) {
+    .checkOut_content {
+        width   : 100%;
+        position: unset; //content1 도넛이미지 위치
+
+        .textArea {
+            width     : 100%;
+            text-align: center;
+        }
+
+        .content1 {
+            padding-top: 0;
+
+            .imgArea {
+                top             : auto;
+                width           : 178px;
+                height          : 241px;
+                background-size : contain;
+                background-image: url(../img/image82.png);
+            }
+        }
+
+        .content2 {
+            ul.cartList {
+                li {
+                    margin: 3em 0;
+                    >div {
+                        
+                        &:nth-of-type(1) {
+                            width: 20%;
+                        }
+
+                        &:nth-of-type(2) {
+                            width        : 80%;
+                            border-bottom: 1px solid var(--purple-color);
+                        }
+
+                        &:nth-of-type(3) {
+                            padding: 1em 0;
+                            width: 70%;
+                        }
+
+                        &:nth-of-type(4) {
+                            padding: 1em 0;
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+
+            .total{
+                width: 100%;
+            }
+        }
+    }
+}
