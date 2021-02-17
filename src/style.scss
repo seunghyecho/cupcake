@@ -17,7 +17,6 @@ $cellphone : 739px;
     --grey-light-color  : #c0c0c0;
 
     --padding    : 12px;
-    --avatar-size: 36px;
 
     --font-large   : 7em;
     --font-m-large : 6em;
@@ -86,7 +85,7 @@ body {
 
 //common
 .wrap {
-    position: relative;
+    position       : relative;
     padding        : var(--padding);
     margin         : 0 auto;
     width          : 1440px;
@@ -146,6 +145,11 @@ body {
             }
         }
     }
+
+    &.checkOut {
+        background-image: url(../img/main_bg4.png);
+
+    }
 }
 
 
@@ -167,6 +171,11 @@ body {
 
         &.whyMiss {
             background-image: url(../img/main_mb_bg3.png);
+        }
+
+        &.checkOut {
+            background-image: url(../img/main_mb_bg4.png);
+
         }
     }
 }

@@ -116,6 +116,12 @@
                 align-items: center;
 
                 div {
+
+                    span {
+                        font-size  : var(--font-small);
+                        font-weight: var(--font-bold);
+                    }
+
                     &:nth-of-type(1) {
                         width: 10%;
                     }
@@ -131,25 +137,19 @@
                     }
                 }
             }
-
-            span {
-                font-size  : var(--font-small);
-                font-weight: var(--font-bold);
-            }
-
         }
 
-
+        .totalPrice {
+            padding        : 1em 0;
+            display        : flex;
+            justify-content: space-between;
+            font-size      : var(--font-small);
+        }
     }
 
-    .totalPrice {
-        padding        : 1em 0;
-        display        : flex;
-        justify-content: space-between;
-        font-size      : var(--font-small);
-    }
+    
 
-}
+
 }
 
 //tablet
